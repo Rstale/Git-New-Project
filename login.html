@@ -1,1 +1,113 @@
-"<h1>Login Page</h1>"  
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .login-container {
+            max-width: 400px;
+            width: calc(100% - 30px);
+            margin: 50px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000018;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #173b70;
+        }
+
+        .login-container label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 22px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            background: #1769aa;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background: #10294d;
+        }
+
+        .login-links {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .login-links a {
+            color: #1769aa;
+            text-decoration: none;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 25px auto;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome Back!</h1>
+        <p>Login to your account</p>
+    </header>
+
+    <main>
+        <form class="login-container" id="loginForm">
+            <h2>Login</h2>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+
+            <div class="login-links">
+                <p><a href="#">Forgot Password?</a></p>
+                <p>Don't have an account? <a href="#">Register</a></p>
+                <p><a href="index.html">Back to Home</a></p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Login form submitted! Connect a backend to authenticate your account.");
+        });
+    </script>
+</body>
+</html>
